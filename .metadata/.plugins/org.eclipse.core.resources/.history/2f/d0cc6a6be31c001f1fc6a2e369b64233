@@ -1,0 +1,43 @@
+package com.main.members;
+
+import java.util.List;
+import com.main.books.Book;
+
+public class Member {
+	
+	private int memberId;
+	private String name;
+	private int maxBooksIssued;
+	private List<Book> currentIssuedBooks;
+	
+	public int getMemberId() {
+		return memberId;
+	}
+	public void setMemberId(int memberId) {
+		this.memberId = memberId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getMaxBooksIssued() {
+		return maxBooksIssued;
+	}
+	public void setMaxBooksIssued(int maxBooksIssued) {
+		this.maxBooksIssued = maxBooksIssued;
+	}
+	public List<Book> getCurrentIssuedBooks() {
+		return currentIssuedBooks;
+	}
+	public void setCurrentIssuedBooks(List<Book> currentIssuedBooks) {
+		this.currentIssuedBooks = currentIssuedBooks;
+	}
+	@Override
+	public String toString() {
+		return "Member [memberId=" + memberId + ", name=" + name + ", maxBooksIssued=" + maxBooksIssued
+				+ ", currentIssuedBooks=" + currentIssuedBooks + "]";
+	}
+
+}

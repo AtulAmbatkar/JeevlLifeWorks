@@ -1,0 +1,60 @@
+package com.main.members;
+
+import java.util.List;
+import java.util.ArrayList;
+import com.main.books.Book;
+
+public class Member {
+	
+	private int memberId;
+	private String name;
+	private int maxBooksIssued;
+	private List<Book> currentIssuedBooks;
+	
+	public Member(int memberId, String name, int maxBooksIssued) {
+		this.memberId = memberId;
+		this.name =  name;
+		this.maxBooksIssued = maxBooksIssued;
+		this.currentIssuedBooks = new ArrayList<>();
+		
+	}
+	
+	public int getMemberId() {
+		return memberId;
+	}
+	public void setMemberId(int memberId) {
+		this.memberId = memberId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getMaxBooksIssued() {
+		return maxBooksIssued;
+	}
+	public void setMaxBooksIssued(int maxBooksIssued) {
+		if(maxBooksIssued >= 0) {
+			this.maxBooksIssued = maxBooksIssued;
+		} else {
+			throw new IllegalArgumentException("Max books issued cannot be negative");
+		}
+	}
+	public List<Book> getCurrentIssuedBooks() {
+		return currentIssuedBooks;
+	}
+	public void setCurrentIssuedBooks(List<Book> currentIssuedBooks) {
+		if(currentIssuedBooks >= 0) {
+			this.currentIssuedBooks = currentIssuedBooks;
+		} else {
+			throw new IllegalArgumentException("Max books issued cannot be negative");
+		}
+	}
+	@Override
+	public String toString() {
+		return "Member [memberId=" + memberId + ", name=" + name + ", maxBooksIssued=" + maxBooksIssued
+				+ ", currentIssuedBooks=" + currentIssuedBooks + "]";
+	}
+
+}

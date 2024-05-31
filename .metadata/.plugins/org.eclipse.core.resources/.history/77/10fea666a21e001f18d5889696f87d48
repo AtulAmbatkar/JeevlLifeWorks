@@ -1,0 +1,69 @@
+package com.main.library;
+
+import com.main.books.Book;
+import com.main.members.Member;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+
+public class Library implements LibraryOperation {
+	
+	public  List<Book> bookList;
+	public  List<Member> memberList;
+
+	public Library() {
+		super();
+		this.bookList = new ArrayList<>();
+		this.memberList =new ArrayList<>();
+	}
+
+	public void addBook(Book book) {
+		bookList.add(book);
+	}
+
+	public void removeBook(Book book) {
+		bookList.remove(book);
+	}
+
+	@Override
+	public boolean issueBook(Book book, Member member) {
+		if (book.isIssued()) {
+			System.out.println("The Book '" + book.getBookTitle() + "' is already issued to another member.");
+			return false;
+		}
+		if (member.getCurrentIssuedBooks().size() >= member.getMaxBooksIssued()) {
+			System.out.println("the Member '" + member.getName() + "' has already issued maximum number of books.");
+			return false;
+		} else {
+			book.setisIssued(true);
+			member.issueBook(book);
+			removeBook(book.getBookId());// Remove a book in Library only after successufull book is isssued
+			return true;
+		}
+	}
+
+	@Override
+	public boolean returnBook(Book book, Member member) {
+		if (!book.isIssued()) {
+			System.out.println("'"+book.getBookTitle() + "' is not issued ");
+			return false;
+		}
+		if (!member.getCurrentIssuedBooks().contains(book)) {
+			System.out.println(
+					"the book '" + book.getBookTitle() + "' is not isued to member '" + member.getName() + "'");
+			return false;
+		} else {
+			book.setisIssued(false);
+			member.returnBook(book);
+			addBook(book);// Added a book in Library only after successfully return a book
+			return true;
+		}
+	}
+
+	public List<Book> getBook() {
+		return bookList;
+	}
+
+}

@@ -1,0 +1,61 @@
+package com.main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.main.books.Book;
+import com.main.library.*;
+import com.main.members.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Library library = new Library();
+		Librarian librarian = new Librarian(library);
+
+		Book book1 = new Book(1, "An Uncommon Love: The Early Life of Sudha and Narayana Murthy",
+				"Chitra Banerjee Divakaruni");
+		Book book2 = new Book(2, "Pride and Prejudice", "Jane Austen");
+		Book book3 = new Book(3, "The Idiot", "Fyodor Dostoyevsky");
+		Book book4 = new Book(4, "The Book Thief", "Markus Zusak");
+
+		System.out.println("Book added in the Library: ");
+		librarian.addBook(book1);
+		librarian.addBook(book2);
+		librarian.addBook(book3);
+		librarian.addBook(book4);
+		
+		System.out.println("\nBook Available in the library: ");
+		for(Book book:library.getBook()) {
+			System.out.println(book.getBookTitle());	
+		}
+
+		//Student Member creating for Library
+		Member student1 = new StudentMember(100, "Atul");
+		Member student2 = new StudentMember(100, "rushi");
+		
+		//Teacher Member creating for Library
+		Member teacher1 = new TeacherMember(1000,"Sunita madam");
+		Member teacher2 = new TeacherMember(1001,"Matpati sir");
+
+		System.out.println("\nBook issued memberName and BookName: ");
+		library.issueBook(book1, teacher1);
+		library.issueBook(book2, student1);
+		library.issueBook(book3, teacher2);
+		library.issueBook(book4, student2);
+
+		library.returnBook(book3, student1);
+
+		library.issueBook(book1, student1);
+
+//		librarian.removeBook(1);
+////		Book getBook = library.getBook(2);
+//		if (getBook == null) {
+//			System.out.println("The Book is removed by Librarian");
+//		} else {
+//			System.out.println("Book: " + getBook);
+//		}
+
+	}
+}

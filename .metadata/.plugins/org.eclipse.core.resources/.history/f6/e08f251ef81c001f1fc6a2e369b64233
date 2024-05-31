@@ -1,0 +1,12 @@
+package com.main.library;
+
+import com.main.members.Member;
+
+public class Librarian extends Member{
+
+	public Librarian(int memberId, String name, int maxBooksIssued) {
+		super(memberId, name, maxBooksIssued);
+	}
+
+	
+}

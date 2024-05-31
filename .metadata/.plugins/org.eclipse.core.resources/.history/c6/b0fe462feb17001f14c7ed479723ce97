@@ -1,0 +1,15 @@
+package com.jeevLifeworks;
+
+import java.util.Scanner;
+
+public class BasicOperation {
+	
+	public static void main(String[] args) {
+		
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.print("Enter the first integer: ");
+		int firstNumber = scn.nextInt();
+	}
+
+}

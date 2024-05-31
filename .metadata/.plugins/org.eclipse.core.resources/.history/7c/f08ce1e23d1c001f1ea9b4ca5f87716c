@@ -1,0 +1,12 @@
+package com.main.books;
+
+public class Book{
+	
+	private int bookId;
+	private String bookTitle;
+	private String bookAuthor;
+	private boolean bookIssued;
+	
+	
+
+}

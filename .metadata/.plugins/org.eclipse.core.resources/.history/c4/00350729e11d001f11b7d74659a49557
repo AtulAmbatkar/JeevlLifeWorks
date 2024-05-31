@@ -1,0 +1,11 @@
+package com.main.library;
+
+import com.main.books.Book;
+import com.main.members.Member;
+
+public interface LibraryOperation {
+	
+	public boolean issueBook(Book book, Member member);
+	public boolean returnBook(Book book, Member member);
+
+}

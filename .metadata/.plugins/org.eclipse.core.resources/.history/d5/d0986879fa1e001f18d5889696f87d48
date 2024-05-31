@@ -1,0 +1,23 @@
+package com.main.library;
+
+import com.main.members.Member;
+import com.main.books.Book;
+
+public class Librarian {
+
+	private Library library;
+
+	public Librarian(Library library) {
+		this.library = library;
+	}
+
+	public void addBook(Book book) {
+		library.addBook(book);
+		System.out.println("Book added Id And Name: " + book.getBookId() + "," + book.getBookTitle());
+	}
+
+	public void removeBook(Book book) {
+		library.removeBook(book);
+		System.out.println("Book removed: " + book.getBookTitle());
+	}
+}

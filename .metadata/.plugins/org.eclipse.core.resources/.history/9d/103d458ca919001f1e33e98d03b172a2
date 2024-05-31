@@ -1,0 +1,62 @@
+package com.jeevLifeworks;
+
+import java.util.Scanner;
+
+public class BasicOperation {
+	
+	public static void main(String[] args) {
+		
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.print("Enter the first integer: ");
+		int firstNumber = scn.nextInt();
+		
+		System.out.print("Enter the Second integer: ");
+		int secondNumber = scn.nextInt();
+		
+		System.out.println("Sum of " + firstNumber + " and " + secondNumber + " is : " + (firstNumber + secondNumber) );
+		System.out.println("Difference between " + firstNumber + " and " + secondNumber + " is : " + (firstNumber - secondNumber) );
+		System.out.println("Product of " + firstNumber + " and " + secondNumber + " is : " + (firstNumber * secondNumber) );
+		System.out.println("Sum of " + firstNumber + " and " + secondNumber + " is : " + (firstNumber + secondNumber) );
+		
+		System.out.print("Enter a floating-point number: ");
+		double floatNumber = scn.nextDouble();
+		
+		System.out.println(floatNumber + " multiplied by " + 2 + " is: " + (floatNumber*2));
+		
+		System.out.print("Enter a single character: ");
+		char singleCharacter = scn.next().charAt(0);
+		
+		System.out.println("The next character after " + singleCharacter + " is: "+ (++singleCharacter));
+		
+		System.out.print("Enter boolean value (true/false) : ");
+		boolean value = scn.nextBoolean();
+		
+		if(!value) {
+			System.out.println("boolan value is : " + true );
+		}
+		else {
+			System.out.println("boolean value is: " + false);
+		}
+		
+		System.out.print("Enter the name : ");
+		String name = scn.next();
+		
+		System.out.println("Welcome to JeevLifeworks " + name + "!");
+		
+		scn.close();
+		
+	}
+	
+	private static void numberOperation(int firstNumber, int secondNumber, float floatNumber) {
+		int sumNumber = firstNumber + secondNumber;
+		System.out.println("Sum of " + firstNumber + " and " + secondNumber + " is : "+sumNumber);
+		int differance = firstNumber - secondNumber;
+		System.out.println("Difference between " + firstNumber + " and " + secondNumber + " is : " +differance);
+		int product = firstNumber * secondNumber;
+		System.out.println("Product of " + firstNumber + " and " + secondNumber + " is : " +product);
+		float result = floatNumber*2;
+		System.out.println(floatNumber +"multiplied by 2 is: " +result);
+	}
+
+}

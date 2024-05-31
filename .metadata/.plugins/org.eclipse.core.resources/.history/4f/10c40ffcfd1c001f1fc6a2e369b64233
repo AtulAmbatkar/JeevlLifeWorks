@@ -1,0 +1,9 @@
+package com.main.members;
+
+public class TeacherMember extends Member{
+	
+	public TeacherMember(int memberId, String name) {
+		super(memberId,name,5); //Teacher can issue a maximum of 5 books.
+	}
+
+}

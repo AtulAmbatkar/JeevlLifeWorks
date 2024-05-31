@@ -1,0 +1,28 @@
+package com.main.library;
+
+import com.main.members.Member;
+import com.main.books.Book;
+
+public class Librarian {
+
+	private Library library;
+
+	public Librarian(Library library) {
+		this.library = library;
+	}
+
+	public void addBook(Book book) {
+		try {
+			library.addBook(book);
+			System.out.println("Book added Id And Name: " +book.getBookId()+ ","+book.getBookTitle());
+//			System.out.println(book);
+		} catch (Exception e) {
+			System.out.println("Exception occurred: " + e.getMessage());
+		}
+	}
+
+	public void removeBook(int bookId) {
+		Book book = library.removeBook(bookId);
+		System.out.println("Book removed: " +book.getBookId()+ ","+book.getBookTitle());
+	}
+}

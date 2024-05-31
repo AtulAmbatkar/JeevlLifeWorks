@@ -1,0 +1,13 @@
+package com.main.members;
+
+import java.util.List;
+import com.main.books.Book;
+
+public class Member {
+	
+	private int memberId;
+	private String name;
+	private int maxBooksIssued;
+	private List<Book> currentIssuedBooks;
+
+}
