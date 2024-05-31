@@ -1,0 +1,8 @@
+package com.jeevLifeWorks.members;
+
+public class StudentMember extends Member {
+
+	public StudentMember(int memberId, String name) {
+		super(memberId,name,3); //Student can issue a maximum of 3 books.
+	}
+}

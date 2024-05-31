@@ -1,0 +1,21 @@
+package com.jeevLifeWorks.library;
+
+import com.jeevLifeWorks.book.Book;
+
+public class Librarian {
+	private Library library;
+
+	// Constructor
+	public Librarian(Library library) {
+		this.library = library;
+	}
+
+	public void addBook(Book book) {
+		library.addBook(book);
+		}
+
+	public void removeBook(Book book) {
+		library.removeBook(book);
+		}
+}
+

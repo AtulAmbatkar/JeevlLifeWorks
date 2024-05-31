@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.jeevLifeWorks.library.Librarian"/>
+    <fullyQualifiedTypeName name="com.main.library.Library"/>
+    <fullyQualifiedTypeName name="com.main.members.Member"/>
+    <fullyQualifiedTypeName name="com.jeevLifeWorks.book.Book"/>
+    <fullyQualifiedTypeName name="com.jeevLifeWorks.library.Library"/>
+    <fullyQualifiedTypeName name="com.jeevLifeWorks.members.Member"/>
+</qualifiedTypeNameHistroy>
