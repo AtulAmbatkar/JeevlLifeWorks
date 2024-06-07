@@ -1,0 +1,5 @@
+Student [id=5, name='Atul', age=25, grade='A', address='Khari ploat JIntur']
+Student [id=3, name='Rushi', age=28, grade='C', address='Karve Nagar Pune']
+Student [id=2, name='Mahesh', age=27, grade='D', address='Javahar Jintur']
+Student [id=7, name='Raju', age=22, grade='A', address='Kechav Nagr Aalandi']
+Student [id=0, name='Atul', age=-25, grade='B', address='Basa Nagar Latur']
